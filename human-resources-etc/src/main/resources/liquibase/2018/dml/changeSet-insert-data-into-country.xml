@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <!--Country Table-->
+    <changeSet id="insertIntoCountry"
+               author="nelson"
+               dbms="postgresql"
+               failOnError="true"
+               runAlways="${runalwaysflag}"
+               runOnChange="${runonchangeflag}"
+               runInTransaction="true">
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="GREECE" />
+            <column name="city" value="ATHENS" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="GREECE" />
+            <column name="city" value="THESSALONIKI" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="GREECE" />
+            <column name="city" value="PATRA" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="MEXICO" />
+            <column name="city" value="MEXICO CITY" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="MEXICO" />
+            <column name="city" value="GUADALAJARA" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="MEXICO" />
+            <column name="city" value="MONTERREY" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="ENGLAND" />
+            <column name="city" value="LONDON" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="ENGLAND" />
+            <column name="city" value="MANCHESTER CITY" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="ENGLAND" />
+            <column name="city" value="LIVERPOOL" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="SPAIN" />
+            <column name="city" value="MADRID" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="SPAIN" />
+            <column name="city" value="BARCELONA" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="SPAIN" />
+            <column name="city" value="SEVILLA" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="USA" />
+            <column name="city" value="NEW YORK" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="USA" />
+            <column name="city" value="LOS ANGELES" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="country">
+            <column name="country_id" valueSequenceNext="COUNTRY_SEQ"/>
+            <column name="country_name" value="USA" />
+            <column name="city" value="SAN FRANCISCO" />
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <!--Department Table-->
+    <changeSet id="insertIntoDepartment"
+               author="nelson"
+               dbms="postgresql"
+               failOnError="true"
+               runAlways="${runalwaysflag}"
+               runOnChange="${runonchangeflag}">
+
+        <insert dbms="postgresql" tableName="department" >
+            <column name="id" valueSequenceNext="DEPARTMENT_SEQ"/>
+            <column name="department_name" value="HR" />
+            <column name="city" value="THESSALONIKI" />
+            <column name="country" value="GREECE" />
+            <column name="street" value="rodos" />
+            <column name="street_number" value="300" />
+            <column name="zip_code" value="123456" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="department">
+            <column name="id" valueSequenceNext="DEPARTMENT_SEQ"/>
+            <column name="department_name" value="IT" />
+            <column name="city" value="MONTERREY" />
+            <column name="country" value="MEXICO" />
+            <column name="street" value="benito juarez" />
+            <column name="street_number" value="209" />
+            <column name="zip_code" value="123456" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="department">
+            <column name="id" valueSequenceNext="DEPARTMENT_SEQ"/>
+            <column name="department_name" value="SALES" />
+            <column name="city" value="MANCHESTER CITY" />
+            <column name="country" value="ENGLAND" />
+            <column name="street" value="wellington" />
+            <column name="street_number" value="150" />
+            <column name="zip_code" value="123456" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="department">
+            <column name="id" valueSequenceNext="DEPARTMENT_SEQ"/>
+            <column name="department_name" value="QA" />
+            <column name="city" value="LOS ANGELES" />
+            <column name="country" value="USA" />
+            <column name="street" value="tulipanes" />
+            <column name="street_number" value="080" />
+            <column name="zip_code" value="123456" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="department">
+            <column name="id" valueSequenceNext="DEPARTMENT_SEQ"/>
+            <column name="department_name" value="DEV" />
+            <column name="city" value="MADRID" />
+            <column name="country" value="SPAIN" />
+            <column name="street" value="dr oscar de la hoya" />
+            <column name="street_number" value="279" />
+            <column name="zip_code" value="123456" />
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

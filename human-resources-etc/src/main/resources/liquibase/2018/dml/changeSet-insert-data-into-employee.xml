@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <!--Employee Table-->
+    <changeSet id="insertIntoEmployee"
+               author="nelson"
+               dbms="postgresql"
+               failOnError="true"
+               runAlways="${runalwaysflag}"
+               runOnChange="${runonchangeflag}"
+               runInTransaction="true">
+
+        <insert dbms="postgresql" tableName="employee">
+            <column name="employee_id" valueSequenceNext="EMPLOYEE_SEQ"/>
+            <column name="first_name" value="john" />
+            <column name="last_name" value="smith" />
+            <column name="birth_date" value="${now}" />
+            <column name="phone_number" value="1412345678" />
+            <column name="email" value="john@gmail.com" />
+            <column name="salary" value="1000" />
+            <column name="join_date" value="${now}" />
+            <column name="city" value="ATHENS" />
+            <column name="country" value="GREECE" />
+            <column name="street" value="thisseos" />
+            <column name="street_number" value="330" />
+            <column name="zip_code" value="123456" />
+            <column name="department_id" value="1" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="employee">
+            <column name="employee_id" valueSequenceNext="EMPLOYEE_SEQ"/>
+            <column name="first_name" value="will" />
+            <column name="last_name" value="jackson" />
+            <column name="birth_date" value="${now}" />
+            <column name="phone_number" value="1412345678" />
+            <column name="email" value="will@gmail.com" />
+            <column name="salary" value="1000" />
+            <column name="join_date" value="${now}" />
+            <column name="city" value="GUADALAJARA" />
+            <column name="country" value="MEXICO" />
+            <column name="street" value="venustiano carranza" />
+            <column name="street_number" value="213" />
+            <column name="zip_code" value="123456" />
+            <column name="department_id" value="2" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="employee">
+            <column name="employee_id" valueSequenceNext="EMPLOYEE_SEQ"/>
+            <column name="first_name" value="luis" />
+            <column name="last_name" value="lopez" />
+            <column name="birth_date" value="${now}" />
+            <column name="phone_number" value="1412345678" />
+            <column name="email" value="luis@gmail.com" />
+            <column name="salary" value="1000" />
+            <column name="join_date" value="${now}" />
+            <column name="city" value="LONDON" />
+            <column name="country" value="ENGLAND" />
+            <column name="street" value="oxford" />
+            <column name="street_number" value="100" />
+            <column name="zip_code" value="123456" />
+            <column name="department_id" value="3" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="employee">
+            <column name="employee_id" valueSequenceNext="EMPLOYEE_SEQ"/>
+            <column name="first_name" value="serena" />
+            <column name="last_name" value="smith" />
+            <column name="birth_date" value="${now}" />
+            <column name="phone_number" value="1412345678" />
+            <column name="email" value="serena@gmail.com" />
+            <column name="salary" value="1000" />
+            <column name="join_date" value="${now}" />
+            <column name="city" value="USA" />
+            <column name="country" value="NEW YORK" />
+            <column name="street" value="big apple" />
+            <column name="street_number" value="321" />
+            <column name="zip_code" value="123456" />
+            <column name="department_id" value="4" />
+        </insert>
+
+        <insert dbms="postgresql" tableName="employee">
+            <column name="employee_id" valueSequenceNext="EMPLOYEE_SEQ"/>
+            <column name="first_name" value="carlos" />
+            <column name="last_name" value="fierro" />
+            <column name="birth_date" value="${now}" />
+            <column name="phone_number" value="1412345678" />
+            <column name="email" value="carlos@gmail.com" />
+            <column name="salary" value="1000" />
+            <column name="join_date" value="${now}" />
+            <column name="city" value="BARCELONA" />
+            <column name="country" value="SPAIN" />
+            <column name="street" value="adolfo mateos" />
+            <column name="street_number" value="104" />
+            <column name="zip_code" value="123456" />
+            <column name="department_id" value="5" />
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
